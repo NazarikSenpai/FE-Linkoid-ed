@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>HTML Forms Lab</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="2">Pizza Shop 2.0</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <form name="username" action="#">
+                    <input type="text" name="username" required placeholder="Nazariy">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Pizza Topping</td>
+            <td>
+                <form name="pizzaTopping" action="#">
+                    <input type="radio" name="pizzaTopping" value="supreme">Supreme
+                    <br>
+                    <input type="radio" name="pizzaTopping" value="vegeterian">Vegeterian
+                    <br>
+                    <input type="radio" name="pizzaTopping" value="hawaiian">Hawaiian
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Pizza Sause</td>
+            <td>
+                <form name="sauce" action="#">
+                    <select name="sauce">
+                        <option selected value="tomato">Tomato</option>
+                        <option value="pesto">Pesto</option>
+                        <option value="hummus">Hummus</option>
+                        <option value="barbecue">Barbecue</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Optional Extras</td>
+            <td>
+                <form name="extras" action="#">
+                    <input type="checkbox" name="extraCheese" value="yes">Extra Cheese
+                    <input type="checkbox" name="glutenFree" value="yes">Gluten Free Base
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Delivery instructions:
+                <form name="deliveryInstructions" action="#">
+                    <textarea name="deliveryInstructions" cols="40" rows="5" placeholder="Write some additional instructions"></textarea>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Send my Order</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
