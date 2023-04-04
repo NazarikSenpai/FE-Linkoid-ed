@@ -4,11 +4,27 @@
 <head>
     <title>HTML Forms Lab</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <style>
+        tr,
+        td,
+        th,
+        table {
+            border: 1px solid #000;
+        }
+
+        table {
+            margin: 0 auto;
+            height: 500px;
+            width: 700px;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <form action="#" method="get">
-        <table border="1">
+        <table>
             <tr>
                 <th colspan="2">Pizza Shop 2.0</th>
             </tr>
@@ -18,7 +34,7 @@
                 </td>
                 <td>
                     <input type="text" id="name" name="user_name" placeholder="Nazariy" pattern="[A-Za-z]{1,32}"
-                        maxlength="32" required>
+                        maxlength="102" required>
                 </td>
             </tr>
             <tr>
