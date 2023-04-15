@@ -11,11 +11,13 @@ $button-expand-green: #28c840;
 body {
   font-family: Arial;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .container {
   width: 400px;
-  margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
   background-color: $background-gray;
