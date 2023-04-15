@@ -103,7 +103,7 @@ body {
   background-color: #53525a;
 }
 .container-top-buttons {
-  margin: 5px 0px 0px 5px;
+  margin: 8px 0px 0px 8px;
   display: flex;
 }
 .container-top-buttons__close {
@@ -157,7 +157,7 @@ body {
   border-radius: 50%;
 }
 .button_small + .button_small {
-  margin: 0px 0px 0px 5px;
+  margin: 0px 0px 0px 8px;
 }
 .button_specific {
   background-color: #4d4c55;
