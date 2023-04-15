@@ -1,92 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Калькулятор</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-      
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f2f2f2;
-      }
-      
-      #calculator {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 100px repeat(4, 1fr);
-        gap: 10px;
-        justify-items: center;
-        align-items: center;
-        margin-top: 50px;
-        width: 320px;
-        height: 560px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        background-color: #fff;
-      }
-      
-      #result {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        background-color: #fff;
-        border-bottom: 1px solid #ccc;
-        font-size: 36px;
-        text-align: right;
-        padding: 10px;
-      }
-      
-      #calculator button {
-        width: 70px;
-        height: 70px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        font-size: 24px;
-        cursor: pointer;
-      }
-      
-      #calculator button:hover {
-        background-color: #f2f2f2;
-      }
-      
-      #calculator .row:nth-child(2) button,
-      #calculator .row:nth-child(3) button,
-      #calculator .row:nth-child(4) button {
-        background-color: #f2f2f2;
-      }
-      
-      #calculator .row:last-child button {
-        grid-column: 3 / -1;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="calculator">
-      <div id="result"></div>
-      <button id="clear">C</button>
-      <button id="backspace">←</button>
-      <button id="percent">%</button>
-      <button id="division">/</button>
-      <button id="seven">7</button>
-      <button id="eight">8</button>
-      <button id="nine">9</button>
-      <button id="multiply">*</button>
-      <button id="four">4</button>
-      <button id="five">5</button>
-      <button id="six">6</button>
-      <button id="subtract">-</button>
-      <button id="one">1</button>
-      <button id="two">2</button>
-      <button id="three">3</button>
-      <button id="add">+</button>
-      <button id="decimal">.</button>
-      <button id="zero">0</button>
-      <button id="equal">=</button>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-top">
+      <div class="container-top-buttons">
+        <button class="container-top-buttons__close button_small" title="Close"></button>
+        <button class="container-top-buttons__collapse button_small" title="Collapse"></button>
+        <button class="container-top-buttons__expand button_small" title="Expand"></button>
+      </div>
+      <input type="text" name="result" class="container-top__result">
     </div>
-    <input type="">
-  </body>
+    <div class="container-bottom">
+      <div class="container-bottom-row">
+        <button class="container-bottom-row__button button_specific">AC</button>
+        <button class="container-bottom-row__button button_specific">+/-</button>
+        <button class="container-bottom-row__button button_specific">%</button>
+        <button class="container-bottom-row__button button_operator">÷</button>
+      
+        <button class="container-bottom-row__button button_number">7</button>
+        <button class="container-bottom-row__button button_number">8</button>
+        <button class="container-bottom-row__button button_number">9</button>
+        <button class="container-bottom-row__button button_operator">×</button>
+      
+        <button class="container-bottom-row__button button_number">4</button>
+        <button class="container-bottom-row__button button_number">5</button>
+        <button class="container-bottom-row__button button_number">6</button>
+        <button class="container-bottom-row__button button_operator">-</button>
+      
+        <button class="container-bottom-row__button button_number">1</button>
+        <button class="container-bottom-row__button button_number">2</button>
+        <button class="container-bottom-row__button button_number">3</button>
+        <button class="container-bottom-row__button button_operator">+</button>
+      
+        <button class="container-bottom-row__button button_number">0</button>
+        <button class="container-bottom-row__button button_number">,</button>
+        <button class="container-bottom-row__button button_operator">=</button>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
