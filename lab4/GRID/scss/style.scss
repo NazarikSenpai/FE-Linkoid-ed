@@ -1,0 +1,109 @@
+@import "_nullstyle.scss";
+
+$backgroundGray: #53525a;
+$buttonOperatorOrange: #ff9f08;
+$buttonNumberGray: #68676d;
+$buttonCollapseOrange: #febc2e;
+$buttonCloseRed: #ff5f57;
+$buttonExpandGreen: #28c840;
+
+%button-gradient {
+  background: rgb(77, 76, 85);
+  background: -moz-linear-gradient(0deg, rgba(77, 76, 85, 1) 0%, rgba(97, 96, 104, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(77, 76, 85, 1) 0%, rgba(97, 96, 104, 1) 100%);
+  background: linear-gradient(0deg, rgba(77, 76, 85, 1) 0%, rgba(97, 96, 104, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d4c55", endColorstr="#616068", GradientType=1);
+}
+
+body {
+  font-family: Arial;
+  color: white;
+
+  display: grid;
+  grid-template: 1fr 478px 1fr/1fr 349px 1fr;
+}
+
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: $backgroundGray;
+  overflow: hidden;
+
+  display: grid;
+  gap: 2px;
+  grid: {
+    area: 2 / 2 / 3 / 3;
+    template: auto auto 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  }
+
+  &-top-buttons {
+    margin: 8px 0px 0px 8px;
+    
+    display: grid;
+    justify-content: left;
+    gap: 8px;
+    grid: {
+      column: span 4;
+      template: auto / auto auto auto;
+    }
+  }
+
+  &-top-buttons__close {
+    background-color: $buttonCloseRed;
+  }
+
+  &-top-buttons__collapse {
+    background-color: $buttonCollapseOrange;
+  }
+
+  &-top-buttons__expand {
+    background-color: $buttonExpandGreen;
+  }
+
+  &-top__result {
+    padding: 20px;
+    background-color: $backgroundGray ;
+    text-align: right;
+    font-size: 80px;
+    color: white;
+
+    grid-column: span 4;
+  }
+
+  &-bottom-row__button {
+    font-size: 30px;
+    color: white;
+
+    &:hover {
+      filter: brightness(95%);
+    }
+
+    &:active {
+      filter: brightness(90%);
+    }
+
+    &:nth-last-child(3) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.button {
+  &_small {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  &_specific {
+    @extend %button-gradient;
+  }
+
+  &_operator {
+    background-color: $buttonOperatorOrange;
+  }
+
+  &_number {
+    background-color: $buttonNumberGray;
+  }
+}
