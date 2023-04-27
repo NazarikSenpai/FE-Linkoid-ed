@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
   padding: 0;
   margin: 0;
@@ -115,24 +114,19 @@ body {
   justify-content: space-between;
   overflow: hidden;
 }
-
 .container-top-buttons {
   margin: 8px 0px 8px 8px;
   display: flex;
 }
-
 .container-top-buttons__close {
   background-color: #ff5f57;
 }
-
 .container-top-buttons__collapse {
   background-color: #febc2e;
 }
-
 .container-top-buttons__expand {
   background-color: #28c840;
 }
-
 .container-top__result {
   width: 100%;
   padding: 20px;
@@ -141,30 +135,23 @@ body {
   font-size: 80px;
   color: white;
 }
-
 .container-bottom-row__button {
   font-size: 30px;
   color: white;
   flex-basis: 24.5%;
   padding: 23px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
-
 .container-bottom-row__button:hover {
   filter: brightness(95%);
 }
-
 .container-bottom-row__button:active {
   filter: brightness(90%);
 }
-
 .container-bottom-row__button:nth-last-child(3) {
   flex-basis: 49.6666666667%;
 }
-
-.container-bottom-row__button:nth-last-child(1),
-.container-bottom-row__button:nth-last-child(2),
-.container-bottom-row__button:nth-last-child(3) {
+.container-bottom-row__button:nth-last-child(1), .container-bottom-row__button:nth-last-child(2), .container-bottom-row__button:nth-last-child(3) {
   margin-bottom: 0px;
 }
 
@@ -173,15 +160,12 @@ body {
   height: 10px;
   border-radius: 50%;
 }
-
-.button_small+.button_small {
+.button_small + .button_small {
   margin: 0px 0px 0px 8px;
 }
-
 .button_operator {
   background-color: #ff9f08;
 }
-
 .button_number {
   background-color: #68676d;
 }

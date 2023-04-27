@@ -20,7 +20,7 @@ body {
   color: white;
 
   display: grid;
-  grid-template: 1fr 478px 1fr/1fr 349px 1fr;
+  grid-template: 1fr 570px 1fr/1fr 400px 1fr;
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
   overflow: hidden;
 
   display: grid;
-  gap: 2px;
+  gap: 3px;
   grid: {
     area: 2 / 2 / 3 / 3;
     template: auto auto 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;

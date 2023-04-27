@@ -67,7 +67,7 @@ body {
     color: white;
     flex-basis: 24.5%;
     padding: 23px;
-    margin-bottom: 3px;
+    margin-bottom: calc(400px * 0.005);
 
     &:hover {
       filter: brightness(95%);
