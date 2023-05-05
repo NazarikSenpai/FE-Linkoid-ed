@@ -1,0 +1,308 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+/*Убирает крестик у текстового поля в IE. сейчас бесполезно потому, что explorer прекратил свою работу*/
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* убирает лишние отступы в кнопке в mozzila firefox */
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+/* End of CSS reset */
+body {
+  background-color: #ebebf2;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: #3c4c61;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+.buttons-row .button {
+  color: #3c4c61;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+.buttons-row .button:first-child {
+  background-color: #2a43fd;
+  color: #fff;
+}
+
+.container-aside {
+  height: 100%;
+  padding: 100px 30px 100px 30px;
+}
+.container-about {
+  margin: 30px;
+}
+
+.aside {
+  flex-grow: 1;
+  background-color: #f3f7f8;
+  border-radius: 20px;
+}
+
+.photo {
+  width: 230px;
+  height: auto;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1019607843);
+}
+.photo img {
+  width: 100%;
+}
+
+.name {
+  font-size: 34px;
+}
+
+.role {
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #e6eaee;
+}
+
+.social-networks {
+  width: 90px;
+}
+.social-networks-row {
+  display: flex;
+  justify-content: space-between;
+}
+.social-networks-row img {
+  height: 20px;
+  width: 20px;
+}
+
+.info-row {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  gap: 25px;
+  align-items: center;
+  height: 100%;
+}
+.info-row .date::before {
+  content: url("https://img.icons8.com/material-outlined/24/909aa6/calendar--v1.png");
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+.info-row .place::before {
+  content: url("https://img.icons8.com/material-outlined/24/909aa6/marker.png");
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+.info-row .email::before {
+  content: url("https://img.icons8.com/material-outlined/24/909aa6/new-post.png");
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+.info-row .skype::before {
+  content: url("https://img.icons8.com/material-outlined/24/909aa6/skype.png");
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+.info-row .phone-number::before {
+  content: url("https://img.icons8.com/material-outlined/24/909aa6/phone.png");
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+
+.personal-info {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  color: #909aa6;
+}
+
+.download {
+  padding: 20px 45px;
+  border-radius: 25px;
+  background-color: #2a43fd;
+}
+.download span {
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.download span::before {
+  content: url("https://img.icons8.com/material-outlined/24/ffffff/downloading-updates.png");
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+
+.about {
+  flex-grow: 5;
+}
+.about-row {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.about-me {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
+.about-me h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.about-me p {
+  color: #909aa6;
+  line-height: 30px;
+}
+.about-me .line {
+  width: 70px;
+  height: 5px;
+  border-radius: 3px;
+  background: url(../img/icons/orange_line.png) center center/cover no-repeat;
+}
+
+.skills-row {
+  display: grid;
+  grid-template: auto 1fr 1fr/1fr 1fr;
+  gap: 30px;
+}
+.skills-row h2 {
+  font-size: 35px;
+  font-weight: 700;
+  grid-column: 1/3;
+}
+
+.box {
+  border: 6px solid #f3f7f8;
+  border-radius: 40px;
+  padding: 45px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 15px;
+}
+.box img {
+  width: 60px;
+}
+.box p {
+  text-align: center;
+  color: #909aa6;
+}
+.box-title {
+  font-weight: 700;
+  font-size: 27px;
+}
