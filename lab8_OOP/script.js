@@ -66,7 +66,7 @@ class Manager extends Employee {
   }
 
   get countedSalary() {
-    let isHalfDevelopers = (this.team.reduce((counter, employee) => employee.constructor.name == "Developer" ? ++counter : counter, 0) / this.team.length) > 0.5;
+    let isHalfDevelopers = (this.team.reduce((counter, employee) => employee instanceof Developer ? ++counter : counter, 0) / this.team.length) > 0.5;
     let countedSalary = super.countedSalary;
 
     if (this.team.length > 10) {
