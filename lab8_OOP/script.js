@@ -203,4 +203,4 @@ let managerWasyl = new Manager({
 
 let company = new Department([managerArtem, managerWasyl]);
 
-company.giveSalary()
+company.giveSalary();
