@@ -64,7 +64,6 @@ body {
   }
 }
 
-
 .container {
   &-aside {
     height: 100%;
@@ -104,7 +103,6 @@ body {
   background-color: $positionBackground;
 }
 
-
 .social-networks {
   width: 90px;
 
@@ -128,23 +126,33 @@ body {
   height: 100%;
 
   .date {
-    @include icon("https://img.icons8.com/material-outlined/24/909aa6/calendar--v1.png");
+    @include icon(
+      "https://img.icons8.com/material-outlined/24/909aa6/calendar--v1.png"
+    );
   }
 
   .place {
-    @include icon("https://img.icons8.com/material-outlined/24/909aa6/marker.png");
+    @include icon(
+      "https://img.icons8.com/material-outlined/24/909aa6/marker.png"
+    );
   }
 
   .email {
-    @include icon("https://img.icons8.com/material-outlined/24/909aa6/new-post.png");
+    @include icon(
+      "https://img.icons8.com/material-outlined/24/909aa6/new-post.png"
+    );
   }
 
   .skype {
-    @include icon("https://img.icons8.com/material-outlined/24/909aa6/skype.png");
+    @include icon(
+      "https://img.icons8.com/material-outlined/24/909aa6/skype.png"
+    );
   }
 
   .phone-number {
-    @include icon("https://img.icons8.com/material-outlined/24/909aa6/phone.png")
+    @include icon(
+      "https://img.icons8.com/material-outlined/24/909aa6/phone.png"
+    );
   }
 }
 
@@ -155,14 +163,15 @@ body {
   color: $aboutTextColor;
 }
 
-
 .download {
   padding: 20px 45px;
   border-radius: 25px;
   background-color: $buttonColor;
 
   span {
-    @include icon("https://img.icons8.com/material-outlined/24/ffffff/downloading-updates.png");
+    @include icon(
+      "https://img.icons8.com/material-outlined/24/ffffff/downloading-updates.png"
+    );
     font-size: 20px;
     color: #fff;
     display: flex;
@@ -199,7 +208,8 @@ body {
       width: 70px;
       height: 5px;
       border-radius: 3px;
-      background: url(../img/icons/orange_line.png) center center/cover no-repeat;
+      background: url(../img/icons/orange_line.png) center center/cover
+        no-repeat;
     }
   }
 }

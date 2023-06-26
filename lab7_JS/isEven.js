@@ -7,4 +7,3 @@ console.log(isEven(11));
 function isEven(num) {
   return Number.isFinite(num) && num % 2 == 0;
 }
-

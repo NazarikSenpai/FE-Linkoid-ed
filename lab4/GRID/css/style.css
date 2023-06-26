@@ -1,33 +1,29 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 :focus,
 :active {
   outline: none;
 }
-
 a:focus,
 a:active {
   outline: none;
 }
-
 nav,
 footer,
 header,
 aside {
   display: block;
 }
-
 html,
 body {
   font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
@@ -40,45 +36,34 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 input,
 button,
 textarea {
   font-family: inherit;
 }
-
 input::-ms-clear {
   display: none;
 }
-
-/*Убирает крестик у текстового поля в IE. сейчас бесполезно потому, что explorer прекратил свою работу*/
 button {
   cursor: pointer;
 }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-
-/* убирает лишние отступы в кнопке в mozzila firefox */
 a,
 a:visited {
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: none;
 }
-
 ul li {
   list-style-type: none;
 }
-
 img {
   vertical-align: top;
 }
-
 h1,
 h2,
 h3,
@@ -88,23 +73,29 @@ h6 {
   font-style: inherit;
   font-weight: 400;
 }
-
-/* End of CSS reset */
 .button_specific {
-  background: rgb(77, 76, 85);
+  background: #4d4c55;
+  background: -moz-linear-gradient(
+    0deg,
+    rgb(77, 76, 85) 0%,
+    rgb(97, 96, 104) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgb(77, 76, 85) 0%,
+    rgb(97, 96, 104) 100%
+  );
   background: linear-gradient(0deg, rgb(77, 76, 85) 0%, rgb(97, 96, 104) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d4c55", endColorstr="#616068", GradientType=1);
 }
-
 body {
   font-family: Arial;
-  color: white;
+  color: #fff;
   display: grid;
   grid-template: 1fr 570px 1fr/1fr 400px 1fr;
 }
-
 .container {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 10px;
   background-color: #53525a;
   overflow: hidden;
@@ -135,12 +126,12 @@ body {
   background-color: #53525a;
   text-align: right;
   font-size: 80px;
-  color: white;
+  color: #fff;
   grid-column: span 4;
 }
 .container-bottom-row__button {
   font-size: 30px;
-  color: white;
+  color: #fff;
 }
 .container-bottom-row__button:hover {
   filter: brightness(95%);
@@ -151,7 +142,6 @@ body {
 .container-bottom-row__button:nth-last-child(3) {
   grid-column: span 2;
 }
-
 .button_small {
   width: 10px;
   height: 10px;

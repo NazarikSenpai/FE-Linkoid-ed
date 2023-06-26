@@ -7,7 +7,6 @@ function fivePrimesSum() {
   let primes = [];
 
   while (primes.length < 5) {
-
     if (isPrime(num)) {
       primes.push(num);
     }
@@ -15,7 +14,7 @@ function fivePrimesSum() {
     num++;
   }
 
-  return primes.reduce((sum, num) => sum += num, 0);
+  return primes.reduce((sum, num) => (sum += num), 0);
 }
 
 function isPrime(num) {

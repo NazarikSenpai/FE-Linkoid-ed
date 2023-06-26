@@ -1,86 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>HTML Forms Lab</title>
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <style>
-        tr,
-        td,
-        th,
-        table {
-            border: 1px solid #000;
-        }
+      tr,
+      td,
+      th,
+      table {
+        border: 1px solid #000;
+      }
 
-        table {
-            margin: 0 auto;
-            height: 500px;
-            width: 700px;
-            max-height: 100%;
-            max-width: 100%;
-        }
+      table {
+        margin: 0 auto;
+        height: 500px;
+        width: 700px;
+        max-height: 100%;
+        max-width: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <form action="#" method="get">
-        <table>
-            <tr>
-                <th colspan="2">Pizza Shop 2.0</th>
-            </tr>
-            <tr>
-                <td>
-                    <label for="name">Name</label>
-                </td>
-                <td>
-                    <input type="text" id="name" name="user_name" placeholder="Nazariy" pattern="[A-Za-z]{1,102}"
-                        maxlength="102" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Pizza Topping</label>
-                </td>
-                <td>
-                    <input type="radio" id="supreme" name="pizzaTopping" value="supreme" required>Supreme<br>
-                    <input type="radio" id="vegeterian" name="pizzaTopping" value="vegeterian">Vegeterian<br>
-                    <input type="radio" id="hawaiian" name="pizzaTopping" value="hawaiian">Hawaiian
-                </td>
-            </tr>
-            <tr>
-                <td>Pizza Sause</td>
-                <td>
-                    <select name="sauce">
-                        <option value="tomato">Tomato</option>
-                        <option value="pesto">Pesto</option>
-                        <option value="hummus">Hummus</option>
-                        <option value="barbecue" selected>Barbecue</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Optional Extras</td>
-                <td>
-                    <input type="checkbox" id="extra_1" name="extraCheeseExtra" value="yes">
-                    <label for="extra_1">Extra Cheese</label>
-                    <input type="checkbox" id="extra_2" name="glutenFreeExtra" value="yes">
-                    <label for="extra_2">Gluten Free Base</label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="instructions">Delivery instructions:</label><br>
-                    <textarea id="instructions" name="deliveryInstructions" cols="60" rows="15" maxlength="150"
-                        placeholder="Write some additional instructions" required></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <button type="submit">Send my Order</button>
-                </td>
-            </tr>
-        </table>
+      <table>
+        <tr>
+          <th colspan="2">Pizza Shop 2.0</th>
+        </tr>
+        <tr>
+          <td>
+            <label for="name">Name</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Nazariy"
+              pattern="[A-Za-z]{1,102}"
+              maxlength="102"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Pizza Topping</label>
+          </td>
+          <td>
+            <input
+              type="radio"
+              id="supreme"
+              name="pizzaTopping"
+              value="supreme"
+              required
+            />Supreme<br />
+            <input
+              type="radio"
+              id="vegeterian"
+              name="pizzaTopping"
+              value="vegeterian"
+            />Vegeterian<br />
+            <input
+              type="radio"
+              id="hawaiian"
+              name="pizzaTopping"
+              value="hawaiian"
+            />Hawaiian
+          </td>
+        </tr>
+        <tr>
+          <td>Pizza Sause</td>
+          <td>
+            <select name="sauce">
+              <option value="tomato">Tomato</option>
+              <option value="pesto">Pesto</option>
+              <option value="hummus">Hummus</option>
+              <option value="barbecue" selected>Barbecue</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Optional Extras</td>
+          <td>
+            <input
+              type="checkbox"
+              id="extra_1"
+              name="extraCheeseExtra"
+              value="yes"
+            />
+            <label for="extra_1">Extra Cheese</label>
+            <input
+              type="checkbox"
+              id="extra_2"
+              name="glutenFreeExtra"
+              value="yes"
+            />
+            <label for="extra_2">Gluten Free Base</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label for="instructions">Delivery instructions:</label><br />
+            <textarea
+              id="instructions"
+              name="deliveryInstructions"
+              cols="60"
+              rows="15"
+              maxlength="150"
+              placeholder="Write some additional instructions"
+              required
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit">Send my Order</button>
+          </td>
+        </tr>
+      </table>
     </form>
-</body>
-
+  </body>
 </html>

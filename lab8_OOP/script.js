@@ -1,8 +1,7 @@
 "use strict";
 
 class Employee {
-
-  constructor (params) {
+  constructor(params) {
     this.firstName = params.firstName;
     this.lastName = params.lastName;
     this.baseSalary = params.baseSalary;
@@ -10,32 +9,24 @@ class Employee {
   }
 
   get countedSalary() {
-
     if (this.experience > 5) {
       return this.baseSalary * 1.2 + 500;
-
     } else if (this.experience > 2) {
       return this.baseSalary + 200;
-
     } else {
       return this.baseSalary;
     }
-
   }
-
 }
 
 class Developer extends Employee {
-
-  constructor (params) {
+  constructor(params) {
     super(params);
   }
-
 }
 
 class Designer extends Employee {
-
-  constructor (params) {
+  constructor(params) {
     super(params);
 
     this.efficiency = params.efficiency;
@@ -54,19 +45,24 @@ class Designer extends Employee {
       this.efficiency = 0;
     }
   } */
-
 }
 
 class Manager extends Employee {
-
-  constructor (params) {
+  constructor(params) {
     super(params);
 
     this.team = params.team;
   }
 
   get countedSalary() {
-    let isHalfDevelopers = (this.team.reduce((counter, employee) => employee instanceof Developer ? ++counter : counter, 0) / this.team.length) > 0.5;
+    let isHalfDevelopers =
+      this.team.reduce(
+        (counter, employee) =>
+          employee instanceof Developer ? ++counter : counter,
+        0
+      ) /
+        this.team.length >
+      0.5;
     let countedSalary = super.countedSalary;
 
     if (this.team.length > 10) {
@@ -81,27 +77,27 @@ class Manager extends Employee {
 
     return countedSalary;
   }
-
 }
 
 class Department {
-
-  constructor (managers) {
+  constructor(managers) {
     this.managers = managers;
   }
 
   giveSalary() {
-    this.managers.forEach(manager => {
-      console.log(`Manager ${manager.firstName} ${manager.lastName} gets ${manager.countedSalary}$`);
+    this.managers.forEach((manager) => {
+      console.log(
+        `Manager ${manager.firstName} ${manager.lastName} gets ${manager.countedSalary}$`
+      );
 
       console.log("This manager's team:");
-      manager.team.forEach(employee => {
-        console.log(`\t${employee.constructor.name} ${employee.firstName} ${employee.lastName} gets ${employee.countedSalary}$`);
+      manager.team.forEach((employee) => {
+        console.log(
+          `\t${employee.constructor.name} ${employee.firstName} ${employee.lastName} gets ${employee.countedSalary}$`
+        );
       });
-
     });
   }
-
 }
 
 let designerRosanna = new Designer({
@@ -190,7 +186,14 @@ let managerArtem = new Manager({
   lastName: "Zelenko",
   baseSalary: 600,
   experience: 3,
-  team: [developerDarius, developerDenys, designerKarolyn, developerIllya, developerMyron, developerShannon],
+  team: [
+    developerDarius,
+    developerDenys,
+    designerKarolyn,
+    developerIllya,
+    developerMyron,
+    developerShannon,
+  ],
 });
 
 let managerWasyl = new Manager({
@@ -198,7 +201,19 @@ let managerWasyl = new Manager({
   lastName: "Pasternak",
   baseSalary: 300,
   experience: 1,
-  team: [designerKimberlee, designerLilia, developerGodfrey, designerKarolyn, designerRosanna, designerKarolyn, designerKarolyn, designerKarolyn, designerKarolyn, designerKarolyn, designerKarolyn],
+  team: [
+    designerKimberlee,
+    designerLilia,
+    developerGodfrey,
+    designerKarolyn,
+    designerRosanna,
+    designerKarolyn,
+    designerKarolyn,
+    designerKarolyn,
+    designerKarolyn,
+    designerKarolyn,
+    designerKarolyn,
+  ],
 });
 
 let company = new Department([managerArtem, managerWasyl]);

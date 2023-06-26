@@ -1,33 +1,29 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 :focus,
 :active {
   outline: none;
 }
-
 a:focus,
 a:active {
   outline: none;
 }
-
 nav,
 footer,
 header,
 aside {
   display: block;
 }
-
 html,
 body {
   font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
@@ -40,45 +36,34 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 input,
 button,
 textarea {
   font-family: inherit;
 }
-
 input::-ms-clear {
   display: none;
 }
-
-/*Убирает крестик у текстового поля в IE. сейчас бесполезно потому, что explorer прекратил свою работу*/
 button {
   cursor: pointer;
 }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-
-/* убирает лишние отступы в кнопке в mozzila firefox */
 a,
 a:visited {
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: none;
 }
-
 ul li {
   list-style-type: none;
 }
-
 img {
   vertical-align: top;
 }
-
 h1,
 h2,
 h3,
@@ -88,8 +73,6 @@ h6 {
   font-style: inherit;
   font-weight: 400;
 }
-
-/* End of CSS reset */
 body {
   background-color: #ebebf2;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -98,18 +81,15 @@ body {
   justify-content: center;
   color: #3c4c61;
 }
-
 .wrapper {
   max-width: 1300px;
   margin: 20px;
-  height: -moz-fit-content;
   height: fit-content;
-  background-color: white;
+  background-color: #fff;
   border-radius: 20px;
   display: flex;
   position: relative;
 }
-
 .buttons-row {
   display: flex;
   justify-content: flex-end;
@@ -128,7 +108,6 @@ body {
   background-color: #2a43fd;
   color: #fff;
 }
-
 .container-aside {
   height: 100%;
   padding: 100px 30px 100px 30px;
@@ -136,13 +115,11 @@ body {
 .container-about {
   margin: 30px;
 }
-
 .aside {
   flex-grow: 1;
   background-color: #f3f7f8;
   border-radius: 20px;
 }
-
 .photo {
   width: 230px;
   height: auto;
@@ -153,17 +130,14 @@ body {
 .photo img {
   width: 100%;
 }
-
 .name {
   font-size: 34px;
 }
-
 .role {
   padding: 10px;
   border-radius: 30px;
   background-color: #e6eaee;
 }
-
 .social-networks {
   width: 90px;
 }
@@ -175,7 +149,6 @@ body {
   height: 20px;
   width: 20px;
 }
-
 .info-row {
   display: flex;
   flex-flow: column nowrap;
@@ -219,14 +192,12 @@ body {
   width: 22px;
   height: 22px;
 }
-
 .personal-info {
   display: flex;
   align-self: flex-start;
   align-items: center;
   color: #909aa6;
 }
-
 .download {
   padding: 20px 45px;
   border-radius: 25px;
@@ -245,7 +216,6 @@ body {
   width: 22px;
   height: 22px;
 }
-
 .about {
   flex-grow: 5;
 }
@@ -274,7 +244,6 @@ body {
   border-radius: 3px;
   background: url(../img/icons/orange_line.png) center center/cover no-repeat;
 }
-
 .skills-row {
   display: grid;
   grid-template: auto 1fr 1fr/1fr 1fr;
@@ -285,7 +254,6 @@ body {
   font-weight: 700;
   grid-column: 1/3;
 }
-
 .box {
   border: 6px solid #f3f7f8;
   border-radius: 40px;
